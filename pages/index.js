@@ -1,6 +1,9 @@
 // next image
 import Image from "next/image";
 
+// links
+import Link from "next/link";
+
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
@@ -26,8 +29,8 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            Hello, I'm <br />
+            <span className='text-accent'>Victor Hoang.</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -35,9 +38,12 @@ const Home = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
+            className='max-w-sm xl:max-w-2xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I am a senior at the University of Southern California studying Computer Science.<br />
+            I am always looking for new <Link href={'/work'}>professional opportunities</Link> in software engineering.<br />
+            I love to travel, play football, and go to concerts.<br />
+            Let's <Link href={'/contact'}>code together</Link>.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
