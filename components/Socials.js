@@ -10,7 +10,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-10 text-3xl'>
+    <div className='flex items-center gap-x-10 text-xl lg:text-3xl'>
       <Link href={'https://instagram.com/victorrhoang?igshid=YmMyMTA2M2Y='} target="_blank" className='hover:text-accent transition-all duration-300'>
         <RiInstagramLine />
       </Link>
