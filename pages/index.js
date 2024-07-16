@@ -29,7 +29,7 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Hello, I'm <br />
+            Hello, I&apos;m <br />
             <span className='text-accent'>Victor Hoang.</span>
           </motion.h1>
           {/* subtitle */}
@@ -43,7 +43,7 @@ const Home = () => {
             I am a senior at the University of Southern California studying Computer Science.<br />
             I am always looking for new <Link href={'/work'}>professional opportunities</Link> in software engineering.<br />
             I love to travel, play football, and go to concerts.<br />
-            Let's <Link href={'/contact'}>code together</Link>.
+            Let&apos;s <Link href={'/contact'}>code together</Link>.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>

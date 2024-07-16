@@ -38,33 +38,33 @@ const aboutData = [
       {
         title: 'Languages',
         icons: [
-          <SiCplusplus />,
-          <FaPython />,
-          <FaJava />,
-          <SiGo />,
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaPhp />,
-          <FaSwift />,
+          <SiCplusplus key="cplusplus" />,
+          <FaPython key="python" />,
+          <FaJava key="java" />,
+          <SiGo key="go" />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaPhp key="php" />,
+          <FaSwift key="swift" />,
         ],
       },
       {
         title: 'Frameworks and Technologies',
         icons: [
-          <FaReact />,
-          <FaNodeJs />,
-          <SiDjango />,
-          <SiSpringboot />,
-          <FaLaravel />,
-          <SiMysql />,
-          <SiSqlite />,
-          <FaAws />,
-          <SiGooglecloud />,
-          <FaDocker />,
-          <FaGit />,
-          <FaGithub />,
-          <SiPostman />,
+          <FaReact key="react" />,
+          <FaNodeJs key="nodejs" />,
+          <SiDjango key="django" />,
+          <SiSpringboot key="springboot" />,
+          <FaLaravel key="laravel" />,
+          <SiMysql key="mysql" />,
+          <SiSqlite key="sqlite" />,
+          <FaAws key="aws" />,
+          <SiGooglecloud key="googlecloud" />,
+          <FaDocker key="docker" />,
+          <FaGit key="git" />,
+          <FaGithub key="github" />,
+          <SiPostman key="postman" />,
         ],
       },
     ],
@@ -99,7 +99,7 @@ const aboutData = [
   //   title: 'credentials',
   //   info: [
   //     {
-  //       title: 'Bachelor\'s in Computer Science - USC',
+  //       title: 'Bachelor of Computer Science - USC',
   //       stage: '2025',
   //     },
   //   ],
@@ -119,7 +119,7 @@ import CountUp from 'react-countup';
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+  // console.log(index);
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
@@ -236,9 +236,9 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className='flex flex-wrap gap-x-4 gap-y-2'>
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
+                    {item.icons?.map((icon, iconIndex) => {
                       return (
-                        <div className='text-2xl text-white'>{icon}</div>
+                        <div key={iconIndex} className='text-2xl text-white'>{icon}</div>
                       );
                     })}
                   </div>
