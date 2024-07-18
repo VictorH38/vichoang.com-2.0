@@ -10,7 +10,53 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../../variants';
 
+// react
+import React, { useState } from 'react';
+
+// EmailJS
+import emailjs from 'emailjs-com';
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const [confirmationMessage, setConfirmationMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_qh0n5t8',
+      'template_qxetvvr',
+      e.target,
+      'z8dSSxIkmmNpUjEqS'
+    ).then((result) => {
+      console.log(result.text);
+      setConfirmationMessage('Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    }, (error) => {
+      console.log(error.text);
+      setConfirmationMessage('Failed to send the message, please try again.');
+    });
+  };
+  
   return (
     <div className='h-full bg-primary/30'>
       <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'>
@@ -28,6 +74,7 @@ const Contact = () => {
           </motion.h2>
           {/* form */}
           <motion.form
+            onSubmit={handleSubmit}
             variants={fadeIn('up', 0.4)}
             initial='hidden'
             animate='show'
@@ -36,18 +83,57 @@ const Contact = () => {
           >
             {/* input group */}
             <div className='flex gap-x-6 w-full'>
-              <input type='text' placeholder='name' className='input' />
-              <input type='text' placeholder='email' className='input' />
+              <input
+                type='text'
+                name='name'
+                placeholder='name'
+                className='input'
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type='email'
+                name='email'
+                placeholder='email'
+                className='input'
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </div>
-            <input type='text' placeholder='subject' className='input' />
-            <textarea placeholder='message' className='textarea'></textarea>
-            <button className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
+            <input
+              type='text'
+              name='subject'
+              placeholder='subject'
+              className='input'
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name='message'
+              placeholder='message'
+              className='textarea'
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button
+              type='submit'
+              className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'
+            >
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>
                 Let's talk
               </span>
               <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
             </button>
           </motion.form>
+          {confirmationMessage && (
+            <div className='mt-4 text-center text-white'>
+              {confirmationMessage}
+            </div>
+          )}
         </div>
       </div>
     </div>
