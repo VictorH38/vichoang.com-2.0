@@ -23,13 +23,13 @@ const workSlides = {
         {
           title_part_1: 'FryftEats',
           title_part_2: 'Website',
-          path: '/fryfteats-website2.png',
+          path: '/fryfteats-website3.png',
           link: 'https://github.com/VictorH38/FryftEats-2.0',
         },
         {
           title_part_1: 'FryftEats',
           title_part_2: 'Mobile',
-          path: '/fryfteats-mobile3.png',
+          path: '/fryfteats-mobile4.png',
           link: 'https://github.com/VictorH38/FryftEats-Mobile',
         },
         // {

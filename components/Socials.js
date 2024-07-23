@@ -3,16 +3,16 @@ import Link from "next/link";
 
 // icons
 import {
-  RiInstagramLine,
   RiGithubLine,
   RiLinkedinBoxLine,
+  RiArticleLine,
 } from 'react-icons/ri';
 
 const Socials = () => {
   return (
     <div className='flex items-center gap-x-10 text-xl lg:text-3xl'>
-      <Link href={'https://instagram.com/victorrhoang?igshid=YmMyMTA2M2Y='} target="_blank" className='hover:text-accent transition-all duration-300'>
-        <RiInstagramLine />
+      <Link href={'/Victor_Hoang_Resume.pdf'} target="_blank" className='hover:text-accent transition-all duration-300'>
+        <RiArticleLine />
       </Link>
       <Link href={'https://github.com/VictorH38'} target="_blank" className='hover:text-accent transition-all duration-300'>
         <RiGithubLine />

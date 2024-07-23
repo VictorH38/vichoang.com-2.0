@@ -17,9 +17,9 @@ import { fadeIn } from '../variants';
 
 const Home = () => {
   return (
-    <div className='bg-primary/60 h-full'>
+    <div className='bg-primary/60 h-full relative'>
       {/* text */}
-      <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
+      <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 relative z-10'>
         <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
           {/* title */}
           <motion.h1
@@ -41,9 +41,9 @@ const Home = () => {
             className='max-w-sm xl:max-w-2xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
             I am a senior at the University of Southern California studying Computer Science.<br />
-            I am always looking for new <Link href={'/work'}>professional opportunities</Link> in software engineering.<br />
+            I am always looking for new professional opportunities in <Link href={'/about'} className='underline hover:text-accent transition-all duration-300'>software engineering</Link>.<br />
             I love to travel, play football, and go to concerts.<br />
-            Let&apos;s <Link href={'/contact'}>code together</Link>.
+            Let&apos;s <Link href={'/contact'} className='underline hover:text-accent transition-all duration-300'>connect</Link>.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>

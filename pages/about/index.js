@@ -16,6 +16,7 @@ import {
   FaDocker,
   FaGit,
   FaGithub,
+  FaSnowflake,
 } from "react-icons/fa";
 
 import {
@@ -27,6 +28,7 @@ import {
   SiSqlite,
   SiGooglecloud,
   SiPostman,
+  SiTailwindcss,
 } from "react-icons/si";
 
 
@@ -56,6 +58,8 @@ const aboutData = [
           <FaNodeJs key="nodejs" />,
           <SiDjango key="django" />,
           <SiSpringboot key="springboot" />,
+          <SiTailwindcss key="tailwind" />,
+          <FaSnowflake key="snowflake" />,
           <FaLaravel key="laravel" />,
           <SiMysql key="mysql" />,
           <SiSqlite key="sqlite" />,
