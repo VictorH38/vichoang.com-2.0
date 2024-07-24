@@ -125,7 +125,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   // console.log(index);
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+    <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-y-auto'>
       <Circles />
       {/* avatar img */}
       {/* <motion.div
@@ -212,7 +212,7 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px] mb-10 sm:mb-0'
+          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
         >
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
@@ -227,7 +227,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+          <div className='py-2 pb-[6rem] xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
