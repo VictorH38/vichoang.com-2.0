@@ -125,7 +125,8 @@ const About = () => {
   const [index, setIndex] = useState(0);
   // console.log(index);
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+    // overflow-y-auto
+    <div className='h-[130%] sm:h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles />
       {/* avatar img */}
       {/* <motion.div
@@ -137,7 +138,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div> */}
-      <div className='container mx-auto min-h-full flex flex-col items-center xl:flex-row gap-x-6'>
+      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
         {/* text */}
         <div className='flex-1 flex flex-col justify-center'>
           <motion.h2
@@ -256,4 +257,5 @@ const About = () => {
   );
 };
 
+About.title = 'About';
 export default About;

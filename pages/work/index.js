@@ -51,4 +51,5 @@ const Work = () => {
   );
 };
 
+Work.title = 'Work';
 export default Work;

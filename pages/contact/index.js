@@ -140,4 +140,5 @@ const Contact = () => {
   );
 };
 
+Contact.title = 'Contact';
 export default Contact;
