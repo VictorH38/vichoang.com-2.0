@@ -94,7 +94,7 @@ const aboutData = [
         stage: 'May 2024 to August 2024',
       },
       {
-        title: 'Full Stack Web Developer - Tresi',
+        title: 'Full Stack Web Developer Intern - Tresi',
         stage: 'May 2023 to Present',
       },
     ],
@@ -125,8 +125,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   // console.log(index);
   return (
-    // overflow-y-auto
-    <div className='h-[130%] sm:h-full bg-primary/30 py-32 text-center xl:text-left'>
+    <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-y-auto'>
       <Circles />
       {/* avatar img */}
       {/* <motion.div
